@@ -1,0 +1,195 @@
+$Light_red: hsl(0, 100%, 67%);
+$Orangey_yellow: hsl(39, 100%, 56%);
+$Green_teal: hsl(166, 100%, 37%);
+$Cobalt_blue: hsl(234, 85%, 45%);
+$Pale_blue: hsl(221, 100%, 96%);
+$Light_lavender: hsl(241, 100%, 89%);
+$Dark_gray_blue: hsl(224, 30%, 27%);
+
+@font-face {
+    font-family: "HankenGrotes";
+    src: url(HankenGrotesk-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "HankenGrotes"
+}
+
+.mainContainer{
+    box-shadow: 10px 15px 15px $Pale_blue;
+}
+
+.resultContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%) );
+    border-radius: 0px 0px 25px 25px;
+    color: $Pale_blue;
+     h1{
+        font-size: 1rem;
+        color: $Light_lavender;
+        opacity: 0.9;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .scoreContainer{
+        background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+        border-radius: 50%;
+        width: 8rem;
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-size: 3rem;
+            margin: 0;
+            color: white;
+        }
+        p{
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: $Light_lavender;
+            opacity: 0.5;
+            
+        }
+    }
+    h2{
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+    }
+    .scoreText{
+        font-size: 0.9rem;
+        margin: 0 4.5rem 2rem 4.5rem;
+        color: $Light_lavender;
+        opacity: 0.9;
+        font-weight: 500;
+    }
+}
+
+.summaryContainer{
+    margin: 2rem;
+    display: flex;
+    
+    flex-direction: column;
+    h1{
+        font-size: 1rem;
+        color: $Dark_gray_blue;
+        opacity: 0.9;
+    }
+    .itemContainer{
+        
+        
+        height: 3rem;
+        background: hsl(220, 16%, 96%);
+        border-radius: 8px;
+        margin-top: 1.5rem;
+        display: block;
+        align-items: center;
+        color: hsla(222, 5%, 44%, 0.774);
+    }
+    button{
+        background: $Dark_gray_blue;
+        border: none;
+        color: white;
+        height: 3rem;
+        border-radius: 30px;
+        cursor: pointer;
+        margin-top: 2rem;
+    }
+    button:hover{
+        background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%) );
+    }
+}
+
+.itemContainer{
+    svg{
+        margin-top: 0.8rem;
+        margin-left: 0.9rem;
+        float: left;
+    }
+}
+
+.Reaction{
+    color:$Light_red;
+    float: left;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.Memory{
+    color: $Orangey_yellow;
+    float: left;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.Verbal{
+    color: $Green_teal;
+    float: left;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.Visual{
+    color: $Cobalt_blue;
+    float: left;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.value{
+    color: $Dark_gray_blue;
+    font-weight: 500;
+    margin-left: 2rem;
+    float: right;
+    margin-right: 4rem; 
+    margin-top: 0.8rem;
+}
+
+.value2{
+    float: right;
+    margin-right: -6rem;
+    margin-top: 0.8rem;
+}
+    @media only screen and (min-width: 600px){
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .mainContainer{
+            display: flex;
+            width: 60%;
+            margin-top: 10rem;
+            margin-bottom: 5rem;
+            border-radius: 25px;
+            min-width: 800px;
+        }
+        .resultContainer{
+            border-radius: 25px;
+            width: 46%;
+            .scoreContainer{
+                height: 10rem;
+                width: 10rem;
+            }
+            h1{
+                font-size: 1.2rem;
+                margin-bottom: 3rem;
+            }
+            h2{
+                margin-top: 2rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+        .summaryContainer{
+            width: 45%;
+        }
+    }
